@@ -1,0 +1,120 @@
+body{
+	font-family: 'Lato' , serif;;
+	margin: 0;
+}
+.top{
+	background-color: #222;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+/*pseudo-element to clear floats so the container div can actually wrap its content*/
+.top:after{
+    clear: both;
+    content: "";
+    display: block;
+}
+.top #menu{
+	display: block;
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #222;
+    box-sizing: border-box;
+}
+.top #menu li{
+	float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #444;
+}
+.go-rigth{
+	float: right;
+}
+#header{
+	position: relative;
+	width: 100%;
+	height: 420px;
+	overflow: hidden;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/*use translate 3d to force hardware acceleration so it looks better (in some devices)*/
+#headerImg{
+	display: block;
+	width: calc(100% + 50px);
+	height: calc(100% + 50px);
+	transform: translate3d(-20px,-20px,0px);
+}
+
+.content{
+	margin: 10px 10% 20px 10%;
+	min-height: 800px;
+	text-align: center;
+}
+
+.menu-left{
+	width: 20%;
+	float:left;
+}
+.menu-right{
+	width: 80%;
+	float:left;
+}
+
+.card-container{
+	height: 280px;
+	min-width: 300px;
+	max-width: 350px;
+	display: inline-block;
+	position: relative;
+	margin: 10px;
+}
+
+.card-container img{
+	height: 100%;
+	width: 100%;
+}
+
+.card-container .card{
+	background: rgba(3,3,3,0.7);
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	opacity: 0;
+  	-webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+
+.card-container a:hover .card{
+	visibility: visible;
+  	opacity: 1;
+}
+
+.inner-div{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: table;
+	padding-top: 50%;
+}
+
+.inner-div span{
+	margin-bottom: 5px;
+	color: white;
+	font-weight: bold;
+	display: block;
+	vertical-align: middle;
+
+}
